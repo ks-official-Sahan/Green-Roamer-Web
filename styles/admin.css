@@ -1,0 +1,7 @@
+.glass-effect {
+  @apply bg-white/10 dark:bg-black/10 backdrop-blur-xl border border-white/10 shadow-lg;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-green-500 to-emerald-700 bg-clip-text text-transparent;
+}
