@@ -1,15 +1,20 @@
+// next.config.mjs
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: undefined,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
+  reactStrictMode: true,
+  experimental: {
+    serverActions: true,
+    // Enable as needed, do not use `output: 'export'`
   },
   images: {
-    unoptimized: true,
+    domains: [
+      "images.unsplash.com",
+      "res.cloudinary.com",
+      "lh3.googleusercontent.com",
+      "i.ytimg.com",
+    ],
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;
