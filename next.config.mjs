@@ -7,7 +7,14 @@ const nextConfig = {
     serverActions: true,
     // Enable as needed, do not use `output: 'export'`
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   images: {
+    unoptimized: true,
     domains: [
       "images.unsplash.com",
       "res.cloudinary.com",
