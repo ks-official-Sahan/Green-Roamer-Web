@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Navbar } from "@/components/navigation/navbar"
 import { SlidersHorizontal, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { greenRoamerData } from "@/data/green-roamer-data"
@@ -186,7 +185,6 @@ export default function ExplorePage() {
           showNav ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <Navbar />
       </div>
 
       <main ref={mainRef} className="relative min-h-screen">
