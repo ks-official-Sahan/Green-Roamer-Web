@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { RefreshCw, Home, AlertTriangle, Wrench } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 
-export default function InternalServerError() {
+export default function Custom500 {
   const [countdown, setCountdown] = useState(30)
   const [isRetrying, setIsRetrying] = useState(false)
 
