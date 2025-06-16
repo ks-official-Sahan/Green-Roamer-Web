@@ -1,4 +1,5 @@
 "use client"
+
 import { useState, useEffect } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -35,13 +36,14 @@ export function NewsletterConfig() {
   }, [])
 
   const loadStats = () => {
+    if (typeof window === "undefined") return
+
     try {
       const lastShown = localStorage.getItem("newsletter-modal-last-shown")
       const status = localStorage.getItem("newsletter-modal-status")
       const variant = localStorage.getItem("newsletter-modal-variant") || "standard"
-      const dismissals = Number.parseInt(localStorage.getItem("newsletter-modal-dismissals") || "0")
+      const dismissals = parseInt(localStorage.getItem("newsletter-modal-dismissals") || "0", 10)
 
-      // Mock stats for demo - in real app, these would come from analytics
       const totalShown = dismissals + (status === "subscribed" ? 1 : 0)
       const totalSubscriptions = status === "subscribed" ? 1 : 0
       const conversionRate = totalShown > 0 ? (totalSubscriptions / totalShown) * 100 : 0
@@ -60,6 +62,8 @@ export function NewsletterConfig() {
   }
 
   const resetModalState = () => {
+    if (typeof window === "undefined") return
+
     try {
       localStorage.removeItem("newsletter-modal-last-shown")
       localStorage.removeItem("newsletter-modal-status")
@@ -68,6 +72,7 @@ export function NewsletterConfig() {
       sessionStorage.removeItem("newsletter-modal-session-shown")
 
       loadStats()
+
       toast({
         title: "Modal State Reset",
         description: "Newsletter modal state has been cleared. It will show again based on the configured rules.",
@@ -82,8 +87,9 @@ export function NewsletterConfig() {
   }
 
   const forceShowModal = () => {
+    if (typeof window === "undefined") return
+
     try {
-      // Clear session storage to allow modal to show
       sessionStorage.removeItem("newsletter-modal-session-shown")
       localStorage.removeItem("newsletter-modal-last-shown")
 
@@ -92,7 +98,6 @@ export function NewsletterConfig() {
         description: "The newsletter modal will appear on the next page interaction.",
       })
 
-      // Reload the page to trigger the modal
       window.location.reload()
     } catch (error) {
       toast({
@@ -104,6 +109,8 @@ export function NewsletterConfig() {
   }
 
   const getStatusBadge = () => {
+    if (typeof window === "undefined") return null
+
     const status = localStorage.getItem("newsletter-modal-status")
     switch (status) {
       case "subscribed":
@@ -230,21 +237,11 @@ export function NewsletterConfig() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Usage Instructions</h3>
             <div className="text-sm text-muted-foreground space-y-2">
-              <p>
-                <strong>Frequency Control:</strong> Modal shows maximum once every 10 days per user
-              </p>
-              <p>
-                <strong>Session Limit:</strong> Only shows once per browser session
-              </p>
-              <p>
-                <strong>Engagement-Based:</strong> Requires user engagement (scroll, time, interactions) before showing
-              </p>
-              <p>
-                <strong>Smart Dismissal:</strong> After 3 dismissals, modal is permanently hidden
-              </p>
-              <p>
-                <strong>A/B Testing:</strong> Three variants available: Standard, Premium, Minimal
-              </p>
+              <p><strong>Frequency Control:</strong> Modal shows maximum once every 10 days per user</p>
+              <p><strong>Session Limit:</strong> Only shows once per browser session</p>
+              <p><strong>Engagement-Based:</strong> Requires user engagement (scroll, time, interactions) before showing</p>
+              <p><strong>Smart Dismissal:</strong> After 3 dismissals, modal is permanently hidden</p>
+              <p><strong>A/B Testing:</strong> Three variants available: Standard, Premium, Minimal</p>
             </div>
           </div>
         </CardContent>
