@@ -70,10 +70,10 @@ Subscribe and keep in touch with us. Hit the bell icon to get notified on our ne
     creationDate: "2023-12-20T22:15:42.017Z",
     region: "IT",
     stats: {
-      viewCount: "166951",
-      subscriberCount: "8240",
-      hiddenSubscriberCount: false,
-      videoCount: "82",
+      viewCount: "168889",
+      subscriberCount: "8270",
+      hiddenSubscriberCount": false,
+      videoCount: "83"
     },
     profileImage:
       "https://yt3.ggpht.com/h5TwRQeLcWPtGG552V3bDchzgxyg0ZgLw5CsBHE4HWCyE67n94dAC6wQCBUgFTu3lhpYQ4sfIg=s800-c-k-c0x00ffffff-no-rj",
@@ -1640,6 +1640,23 @@ Subscribe and keep in touch with us. Hit the bell icon to get notified on our ne
   ],
   shorts: [
     {
+      videoId: "co2nCJ8QMFo",
+      title: "Galle Face Colombo Sri Lanka",
+      url: "https://www.youtube.com/watch?v=co2nCJ8QMFo",
+      description: "",
+      uploadDate: "2025-06-17T05:17:36Z",
+      duration: "PT30S",
+      thumbnail: "https://i.ytimg.com/vi/co2nCJ8QMFo/hqdefault.jpg",
+      viewCount: "780",
+      likeCount: "15",
+      commentCount: "0",
+      tags: null,
+      categoryId: "19",
+      language: "zxx",
+      locationHints: "Galle Face Colombo Sri Lanka",
+      durationSeconds: 30
+    },
+    {
       videoId: "XrhhloxSDnc",
       title: "Na Ella (නා ඇල්ල ) Sri Lanka",
       url: "https://www.youtube.com/watch?v=XrhhloxSDnc",
@@ -1647,8 +1664,8 @@ Subscribe and keep in touch with us. Hit the bell icon to get notified on our ne
       uploadDate: "2025-05-26T11:41:05Z",
       duration: "PT31S",
       thumbnail: "https://i.ytimg.com/vi/XrhhloxSDnc/hqdefault.jpg",
-      viewCount: "1589",
-      likeCount: "16",
+      viewCount: "1594",
+      likeCount: "17",
       commentCount: "1",
       tags: [
         "Water falls in sri lanka",
@@ -1672,8 +1689,8 @@ Subscribe and keep in touch with us. Hit the bell icon to get notified on our ne
       uploadDate: "2025-04-09T08:10:58Z",
       duration: "PT11S",
       thumbnail: "https://i.ytimg.com/vi/v5IxyGWetW0/hqdefault.jpg",
-      viewCount: "549",
-      likeCount: "10",
+      viewCount: "564",
+      likeCount: "11",
       commentCount: "1",
       tags: [
         "sri lanka",
@@ -1709,7 +1726,7 @@ Subscribe and keep in touch with us. Hit the bell icon to get notified on our ne
       uploadDate: "2025-03-17T09:30:07Z",
       duration: "PT37S",
       thumbnail: "https://i.ytimg.com/vi/EukfAPWvY2M/hqdefault.jpg",
-      viewCount: "53",
+      viewCount: "54",
       likeCount: "8",
       commentCount: "1",
       tags: [
