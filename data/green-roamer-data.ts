@@ -72,7 +72,7 @@ Subscribe and keep in touch with us. Hit the bell icon to get notified on our ne
     stats: {
       viewCount: "168889",
       subscriberCount: "8270",
-      hiddenSubscriberCount": false,
+      hiddenSubscriberCount: false,
       videoCount: "83"
     },
     profileImage:
